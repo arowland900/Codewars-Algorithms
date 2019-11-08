@@ -6,7 +6,7 @@
 
 You know what divisors of a number are. The divisors of a positive integer n are said to be proper when you consider only the divisors other than n itself. In the following description, divisors will mean proper divisors. For example for `100` they are `1, 2, 4, 5, 10, 20, 25, and 50`.
 
-Let `s(n`) be the sum of these proper divisors of `n`. Call buddy two positive integers such that the sum of the proper divisors of each number is one more than the other number:
+Let `s(n)` be the sum of these proper divisors of `n`. Call buddy two positive integers such that the sum of the proper divisors of each number is one more than the other number:
 
 `(n, m)` are a pair of buddy if `s(m) = n + 1` and `s(n) = m + 1`
 
