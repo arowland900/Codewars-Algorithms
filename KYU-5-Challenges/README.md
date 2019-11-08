@@ -1,6 +1,6 @@
 # Challenge 1
 
-### Link to Challenge: [link](https://www.codewars.com/kata/buddy-pairs/train/javascript)
+### Link to Challenge: [Buddy Pairs](https://www.codewars.com/kata/buddy-pairs/train/javascript)
 
 **Buddy pairs**
 
