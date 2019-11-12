@@ -36,3 +36,20 @@ function buddy(start, limit) {
     }
     return "Nothing"
 }
+
+// best solution -- no longer times out on Codewars
+const s = (n) => {
+    let res = 0
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) i === n / i ? res += i : res += i + n / i
+    }
+    return res
+}
+
+function buddy(start, limit) {
+    for (let i = start; i <= limit; i++) {
+        let si = s(i)
+        if (i < si && i === s(si)) return [i, si]
+    }
+    return "Nothing"
+}
