@@ -13,3 +13,13 @@ function redarr(arr) {
 function redarr(arr) {
     return Object.assign({}, [...new Set(arr)].sort())
 }
+
+// Solution 3 -- this solution doesnt use "Set" or "Object.assign()", to show that we can solve this problem without any JS shortcuts
+
+function redarr(arr) {
+    let newArr = [], res = {}
+    for (let i in arr) newArr.includes(arr[i]) ? [] : newArr.push(arr[i])
+    newArr.sort()
+    for (let i in newArr) res[i] = newArr[i]
+    return res
+}
