@@ -38,18 +38,22 @@ function buddy(start, limit) {
 }
 
 // best solution -- no longer times out on Codewars
-const s = (n) => {
-    let res = 0
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) i === n / i ? res += i : res += i + n / i
+const getSum = (n) => {
+    let sum = 0
+    for (let i = 2; i < Math.sqrt(n); i++) {
+        if (n % i === 0) i === n / i ? sum += i : sum += n / i + i
     }
-    return res
+    return sum
 }
 
 function buddy(start, limit) {
     for (let i = start; i <= limit; i++) {
-        let si = s(i)
-        if (i < si && i === s(si)) return [i, si]
+        let sum = getSum(i)
+        if (i < sum && i === getSum(sum)) return [i, sum]
     }
     return "Nothing"
 }
+
+
+
+
