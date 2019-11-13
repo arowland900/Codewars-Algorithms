@@ -14,7 +14,7 @@ function redarr(arr) {
     return Object.assign({}, [...new Set(arr)].sort())
 }
 
-// Solution 3 -- this solution doesnt use "Set" or "Object.assign()", to show that we can solve this problem without any JS shortcuts
+// Solution 3 -- this solution does not use "Set" or "Object.assign()", to show that we can solve this problem without any JS shortcuts
 
 function redarr(arr) {
     let newArr = [], res = {}
