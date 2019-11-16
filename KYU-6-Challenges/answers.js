@@ -35,8 +35,7 @@ function tickets(peopleInLine) {
         } else if (x == 50) {
             if (change[0] == 25) {
                 change.shift()
-                let hIdx = change.indexOf(100)
-                hIdx > -1 ? change.splice(hIdx, 0, 50) : change.push(50)
+                change.push(50)
             } else return "NO"
         } else {
             if (change[0] == 25) {
