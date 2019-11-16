@@ -28,14 +28,24 @@ function redarr(arr) {
 function tickets(peopleInLine) {
     let change = []
     if (peopleInLine[0] !== 25) return "NO"
-
-    for (let i in peopleInLine) {
-        if (peopleInLine[i] == 25) change.push(peopleInLine[i])
-        else {
-            let idx = change.indexOf(peopleInLine[i] - 25)
-            if (idx > -1) {
-                change.splice(idx, 1)
-                change.push(peopleInLine[i])
+    while (peopleInLine.length) {
+        let x = peopleInLine.shift()
+        if (x == 25) {
+            change.unshift(25)
+        } else if (x == 50) {
+            if (change[0] == 25) {
+                change.shift()
+                let hIdx = change.indexOf(100)
+                hIdx > -1 ? change.splice(hIdx, 0, 50) : change.push(50)
+            } else return "NO"
+        } else {
+            if (change[0] == 25) {
+                if (change.includes(50)) {
+                    change.shift()
+                    change.pop()
+                } else if (change[1] == 25 && change[2] == 25) {
+                    change.splice(0, 3)
+                } else return "NO"
             } else return "NO"
         }
     }
