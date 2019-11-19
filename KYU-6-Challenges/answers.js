@@ -50,3 +50,23 @@ function tickets(peopleInLine) {
     }
     return "YES"
 }
+
+// Solution 2 -- slightly more concise, but similar time complexity
+function tickets(pplInLine) {
+    if (pplInLine[0] != 25) return "NO"
+    let change = []
+    while (pplInLine.length) {
+        let x = pplInLine.shift()
+        if (x == 25) change.unshift(25);
+        else if (x == 50) {
+            if (change.includes(25)) { change.shift(); change.push(50); }
+            else return "NO"
+        }
+        else {
+            if (change.includes(50) && change.includes(25)) { change.shift(); change.pop(); }
+            else if (change.filter(e => e == 25).length > 2) change.splice(0, 3);
+            else return "NO"
+        }
+    }
+    return "YES"
+}
