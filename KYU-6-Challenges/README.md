@@ -54,3 +54,24 @@ tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to 
 ### Link to Challenge: [Traverse array elements diagonally](https://www.codewars.com/kata/traverse-array-elements-diagonally/train/javascript)
 
 **Traverse array elements diagonally**
+
+In this kata you're given an `n x n` array and you're expected to traverse the elements diagonally from the bottom right to the top left.
+
+Example `let arr = [[1,6,7],[7,2,4],[3,5,9]]`
+```
+  1 6 7
+  7 2 4
+  3 5 9
+```
+your solution should return elements in the following order
+
+```
+9
+4 5
+7 2 3
+6 7
+1
+```
+`should return [9, 4, 5, 7, 2, 3, 6, 7, 1]`
+
+Your task is to write the function diagonal() that returns the array elements in the above manner.
