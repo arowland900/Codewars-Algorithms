@@ -48,3 +48,9 @@ tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to 
 ```
 
 ---
+
+# Challenge 3
+
+### Link to Challenge: [Traverse array elements diagonally](https://www.codewars.com/kata/traverse-array-elements-diagonally/train/javascript)
+
+**Traverse array elements diagonally**
