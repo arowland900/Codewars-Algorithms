@@ -70,3 +70,23 @@ function tickets(pplInLine) {
     }
     return "YES"
 }
+
+// Solution 3 -- more concise, alternative data storate
+function tickets(ppl) {
+    let bank = {
+        '25': 0,
+        '50': 0
+    }
+    while (ppl.length) {
+        let c = ppl.shift()
+        let x = (c - 25) / 25
+        bank[c] += 1
+        if (x > 2 && bank['50']) { 
+            bank['50'] -= 1; 
+            x -= 2; 
+        }
+        bank['25'] -= x
+        if (bank['50'] < 0 || bank['25'] < 0) return 'NO';
+    }
+    return "YES"
+}
