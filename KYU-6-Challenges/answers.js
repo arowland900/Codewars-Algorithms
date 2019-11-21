@@ -1,4 +1,4 @@
-// CHALLENGE 1 (TV CHANNELS)
+/* ---------- CHALLENGE 1 (TV CHANNELS) ---------- */
 
 // Solution 1 -- this solution works well, but we can also solve this problem more concisely
 function redarr(arr) {
@@ -22,7 +22,7 @@ function redarr(arr) {
     return res
 }
 
-// CHALLENGE 2 (VASYA CLERK)
+/* ---------- CHALLENGE 2 (VASYA CLERK) ---------- */
 
 // Solution 1 -- works fine, but thinking of ways to write it more concisely
 function tickets(peopleInLine) {
@@ -101,4 +101,42 @@ function tickets(peopleInLine) {
         if (c25 < 0 || c50 < 0) return 'NO'
     }
     return 'YES'
+}
+
+/* ---------- CHALLENGE 3 (TRAVERSE ARRAY ELEMENTS DIAGONALLY) ---------- */
+
+// Solution 1 -- using nested for loops with a tmp variable
+function diagonal(arr) {
+    let ans = []
+    let num = arr.length - 1
+
+    for (var i = num; i >= 0; i--) {
+        var tmp = i
+        for (var j = num; j >= i; j--) {
+            ans.push(arr[tmp][j])
+            tmp++
+        }
+    }
+    for (var i = num - 1; i >= 0; i--) {
+        var tmp = i
+        for (var j = 0; j <= i; j++) {
+            ans.push(arr[j][tmp])
+            tmp--
+        }
+    }
+    return ans
+}
+
+// Solution 2 -- similar approach, slightly more concise code
+function diagonal(arr) {
+    let n = arr.length - 1, res = []
+    while (arr[0].length) {
+        arr.forEach((a, i) => {
+            if(i >= n && a.length){ 
+                res.push(a.pop()) 
+            }
+        })
+        n--
+    }
+    return res
 }
