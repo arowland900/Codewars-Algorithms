@@ -81,12 +81,24 @@ function tickets(ppl) {
         let c = ppl.shift()
         let x = (c - 25) / 25
         bank[c] += 1
-        if (x > 2 && bank['50']) { 
-            bank['50'] -= 1; 
-            x -= 2; 
+        if (x > 2 && bank['50']) {
+            bank['50'] -= 1;
+            x -= 2;
         }
         bank['25'] -= x
         if (bank['50'] < 0 || bank['25'] < 0) return 'NO';
     }
     return "YES"
+}
+
+// Solution 4 -- very concise, love this one (got this from codewars)
+function tickets(peopleInLine) {
+    let [c25, c50] = [0, 0];
+    for (let v of peopleInLine) {
+        if (v === 25) c25++;
+        if (v === 50) { c50++; c25--; }
+        if (v === 100) { c25--; c50 > 0 ? c50-- : c25 -= 2; }
+        if (c25 < 0 || c50 < 0) return 'NO'
+    }
+    return 'YES'
 }
