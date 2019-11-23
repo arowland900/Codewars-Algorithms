@@ -75,3 +75,11 @@ your solution should return elements in the following order
 `should return [9, 4, 5, 7, 2, 3, 6, 7, 1]`
 
 Your task is to write the function diagonal() that returns the array elements in the above manner.
+
+---
+
+# Challenge 4
+
+### Link to Challenge: [Vasya and System of Equations](https://www.codewars.com/kata/vasya-and-system-of-equations/train/javascript)
+
+**Vasya and System of Equations**
