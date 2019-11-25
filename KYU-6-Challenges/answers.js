@@ -168,5 +168,5 @@ function solution(n, m) {
     return c
 }
 
-/* ---------- CHALLENGE 4 (VOWEL CONSONANT LEXICON) ---------- */
+/* ---------- CHALLENGE 5 (VOWEL CONSONANT LEXICON) ---------- */
 
