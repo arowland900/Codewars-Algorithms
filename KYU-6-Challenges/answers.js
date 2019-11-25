@@ -132,11 +132,25 @@ function diagonal(arr) {
     let n = arr.length - 1, res = []
     while (arr[0].length) {
         arr.forEach((a, i) => {
-            if(i >= n && a.length){ 
-                res.push(a.pop()) 
+            if (i >= n && a.length) {
+                res.push(a.pop())
             }
         })
         n--
     }
     return res
+}
+
+/* ---------- CHALLENGE 4 (VASYA AND SYSTEM OF EQUATIONS) ---------- */
+
+// Solution 1 -- using nested for loops
+
+function solution(n, m) {
+    let counter = 0
+    for (let a = 0; a <= Math.sqrt(n); a++) {
+        for (let b = 0; b <= Math.sqrt(m); b++) {
+            if (a * a + b == n && b * b + a == m) counter += 1
+        }
+    }
+    return counter
 }
