@@ -102,7 +102,11 @@ solution(9,3) // => 1
 solution(14,28) // => 
 solution(4,20) // => 0
 
+# Challenge 5
 
+### Link to Challenge: [Vowel-consonant lexicon](https://www.codewars.com/kata/vowel-consonant-lexicon/train/javascript)
+
+**Vowel-consonant lexicon**
 
 
 If we alternate the vowels and consonants in the string "have", we get the following list, arranged alphabetically: ['ahev', 'aveh', 'ehav', 'evah', 'vahe', 'veha']. These are the only possibilities in which vowels and consonants are alternated. The first element, ahev, is alphabetically lowest.
