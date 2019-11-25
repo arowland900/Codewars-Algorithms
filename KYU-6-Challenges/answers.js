@@ -167,3 +167,6 @@ function solution(n, m) {
     }
     return c
 }
+
+/* ---------- CHALLENGE 4 (VOWEL CONSONANT LEXICON) ---------- */
+
