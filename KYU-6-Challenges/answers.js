@@ -146,11 +146,24 @@ function diagonal(arr) {
 // Solution 1 -- using nested for loops
 
 function solution(n, m) {
-    let counter = 0
+    let c = 0
     for (let a = 0; a <= Math.sqrt(n); a++) {
         for (let b = 0; b <= Math.sqrt(m); b++) {
-            if (a * a + b == n && b * b + a == m) counter += 1
+            if (a * a + b == n && b * b + a == m) c += 1
         }
     }
-    return counter
+    return c
+}
+
+// Solution 2 -- using one loop
+
+function solution(n, m) {
+    let c = 0
+    for (let a = 0; a * a <= n; a++) {
+        let b = n - a * a
+        if (b * b + a == m) {
+            c++
+        }
+    }
+    return c
 }
