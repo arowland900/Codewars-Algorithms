@@ -170,3 +170,30 @@ function solution(n, m) {
 
 /* ---------- CHALLENGE 5 (VOWEL CONSONANT LEXICON) ---------- */
 
+function solve(s) {
+
+    let vowels = 'aeiou'
+    let [v, c] = [[], []]
+    let res = ''
+
+    s.split('').sort().forEach(l => {
+        vowels.includes(l) ? v.push(l) : c.push(l)
+    })
+
+    if (v.length - 1 > c.length || c.length - 1 > v.length) {
+        return "failed"
+    }
+
+    while (v.length || c.length) {
+        let x = c.shift()
+        let y = v.shift()
+        if (c.length > v.length) {
+            if (x) res += x
+            if (y) res += y
+        } else {
+            if (y) res += y
+            if (x) res += x
+        }
+    }
+    return res
+}
