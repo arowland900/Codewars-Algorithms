@@ -198,3 +198,21 @@ function solve(s) {
     }
     return res
 }
+
+// Solution 2 -- cleaner, uses regex, takes less time
+
+function solve(s) {
+
+    let a = s.match(/[^aeiou]/g).sort();
+    let b = s.match(/[aeiou]/g).sort();
+
+    if (a.length > b.length)
+        [a, b] = [b, a];
+
+    if (b.length - a.length > 1)
+        return 'failed';
+
+    return b
+        .map((c, i) => c + (a[i] || ''))
+        .join('');
+};
