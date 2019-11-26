@@ -233,7 +233,6 @@ function partsSums(ls) {
 }
 
 // Solution 2 -- also works for smaller data, but still times out in codewars
-
 function partsSums(ls) {
     let res = []
     while(ls.length){
