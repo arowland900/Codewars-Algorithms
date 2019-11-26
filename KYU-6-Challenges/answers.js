@@ -216,3 +216,18 @@ function solve(s) {
         .map((c, i) => c + (a[i] || ''))
         .join('');
 };
+
+/* ---------- CHALLENGE 6 (SUM OF PARTS) ---------- */
+
+// Solution 1 -- works for smaller data, but times out in codewars
+function partsSums(ls) {
+    let res = ls.map((c, i) => {
+        let x = 0
+        for (let j = i; j < ls.length; j++) {
+            x += ls[j]
+        }
+        return x
+    })
+    res.push(0)
+    return res
+}
