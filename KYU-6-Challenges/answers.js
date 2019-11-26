@@ -170,6 +170,7 @@ function solution(n, m) {
 
 /* ---------- CHALLENGE 5 (VOWEL CONSONANT LEXICON) ---------- */
 
+// Solution 1
 function solve(s) {
 
     let vowels = 'aeiou'
