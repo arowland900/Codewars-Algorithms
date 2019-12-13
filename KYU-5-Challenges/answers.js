@@ -83,3 +83,21 @@ function pickPeaks(arr) {
     })
     return obj
 }
+
+// Solution 2 -- much cleaner
+function pickPeaks(arr) {
+    let res = { pos: [], peaks: [] };
+    if (arr.length > 2) {
+        let p = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[i - 1]) {
+                p = i;
+            } else if (arr[i] < arr[i - 1] && p) {
+                res.pos.push(p);
+                res.peaks.push(arr[p]);
+                p = 0;
+            }
+        }
+    }
+    return res;
+}
