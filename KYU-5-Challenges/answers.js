@@ -54,6 +54,6 @@ function buddy(start, limit) {
     return "Nothing"
 }
 
-
+/* ---------- CHALLENGE 2 (PICK PEAKS) ---------- */
 
 
