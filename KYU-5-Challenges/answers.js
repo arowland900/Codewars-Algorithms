@@ -1,4 +1,4 @@
-// Challenge 1
+/* ---------- CHALLENGE 1 (BUDDY PAIRS) ---------- */
 
 // first solution -- works, but has poor time complexity & times out in Codewars
 function buddy(start, limit) {
