@@ -24,3 +24,11 @@ Examples
 buddy(10, 50) returns [48, 75] 
 buddy(48, 50) returns [48, 75]
 ```
+
+---
+
+# Challenge 2
+
+### Link to Challenge: [Pick Peaks](https://www.codewars.com/kata/pick-peaks/train/javascript)
+
+**Pick Peaks**
