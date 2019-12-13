@@ -56,8 +56,7 @@ function buddy(start, limit) {
 
 /* ---------- CHALLENGE 2 (PICK PEAKS) ---------- */
 
-// Solution 1
-
+// Solution 1 -- works just fine, but a bit clunky
 function pickPeaks(arr) {
 
     var obj = {}
