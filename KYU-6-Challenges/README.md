@@ -159,3 +159,30 @@ parts_sums(ls) -> [21, 20, 18, 15, 11, 6, 0]
 ls = [744125, 935, 407, 454, 430, 90, 144, 6710213, 889, 810, 2579358]
 parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 9291414, 9291270, 2581057, 2580168, 2579358, 0]
 ```
+
+---
+
+# Challenge 7 
+
+### Link to Challenge: [Simple Number Triangle](https://www.codewars.com/kata/5a906c895084d7ed740000c2)
+
+**Simple Number Triangle**
+
+Consider the number triangle below, in which each number is equal to the number above plus the number to the left. If there is no number above, assume it's a 0.
+
+```
+1
+1 1
+1 2 2
+1 3 5 5
+1 4 9 14 14
+```
+The triangle has 5 rows and the sum of the last row is `sum([1,4,9,14,14]) = 42`.
+
+You will be given an integer `n` and your task will be to return the sum of the last row of a triangle of `n` rows.
+
+In the example above:
+
+`solve(5) = 42`
+
+---
