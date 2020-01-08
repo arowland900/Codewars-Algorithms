@@ -260,3 +260,21 @@ function solve(n) {
         p++
     }
 }
+
+// Complete Solution #1, but doesn't work with big numbers:
+
+function solve(n) {
+    let p = 0
+    let arr = []
+
+    for (let i = 0; i < n; i++) {
+        arr.push([1])
+        for (let j = 1; j <= p; j++) {
+            let left = arr[i][j - 1] ? arr[i][j - 1] : 0
+            let above = arr[i - 1][j] ? arr[i - 1][j] : 0
+            arr[i].push(left + above)
+        }
+        p++
+    }
+    return arr[n - 1].reduce((a, e) => a += e)
+}
