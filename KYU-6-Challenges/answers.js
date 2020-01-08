@@ -235,10 +235,28 @@ function partsSums(ls) {
 // Solution 2 -- also works for smaller data, but still times out in codewars
 function partsSums(ls) {
     let res = []
-    while(ls.length){
-      res.push(ls.reduce((a,c) => a+= c))
-      ls.shift()
+    while (ls.length) {
+        res.push(ls.reduce((a, c) => a += c))
+        ls.shift()
     }
     res.push(0)
     return res
+}
+
+/* ---------- CHALLENGE 7 (SIMPLE NUMBER TRIANGLE) ---------- */
+
+// Incomplete Solution #1: (using nested loops to push elements)
+
+function solve(n) {
+    let p = 0
+    let arr = []
+
+    for (let i = 0; i < n; i++) {
+        arr.push([1])
+        for (let j = 0; j < p; j++) {
+            let above = ''
+            let left = ''
+        }
+        p++
+    }
 }
