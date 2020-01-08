@@ -296,3 +296,16 @@ function solve(n) {
     }
     return BigInt(arr[arr.length - 1].reduce((a, e) => a += e))
 }
+
+/* ---------- CHALLENGE 8 (WRITE NUMBER IN EXPANDED FORM) ---------- */
+
+function expandedForm(num) {
+    num = String(num).split('')
+    let x = num.length - 1
+
+    return num
+        .map((e, i) => e * 10 ** (x - i))
+        .filter(e => e != 0)
+        .join(" + ")
+
+}
