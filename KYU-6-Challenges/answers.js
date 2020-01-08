@@ -278,3 +278,21 @@ function solve(n) {
     }
     return arr[n - 1].reduce((a, e) => a += e)
 }
+
+// Solution 1, now working with BigInt:
+
+function solve(n) {
+    let p = 0
+    let arr = []
+
+    for (let i = 0; i < n; i++) {
+        arr.push([1])
+        for (let j = 1; j <= p; j++) {
+            let left = arr[i][j - 1] ? arr[i][j - 1] : 0
+            let above = arr[i - 1][j] ? arr[i - 1][j] : 0
+            arr[i].push(left + above)
+        }
+        p++
+    }
+    return BigInt(arr[arr.length - 1].reduce((a, e) => a += e))
+}
