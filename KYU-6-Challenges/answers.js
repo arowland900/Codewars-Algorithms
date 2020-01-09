@@ -299,6 +299,8 @@ function solve(n) {
 
 /* ---------- CHALLENGE 8 (WRITE NUMBER IN EXPANDED FORM) ---------- */
 
+// Solution 1: 
+
 function expandedForm(num) {
     num = String(num).split('')
     let x = num.length - 1
@@ -308,4 +310,14 @@ function expandedForm(num) {
         .filter(e => e != 0)
         .join(" + ")
 
+}
+
+// Solution 2:
+
+function expandedForm(num) {
+    return String(num)
+        .split('')
+        .map((e, i, a) => e * 10 ** (a.length - 1 - i))
+        .filter(e => e != 0)
+        .join(" + ")
 }
