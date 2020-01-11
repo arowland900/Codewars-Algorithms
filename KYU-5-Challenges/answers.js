@@ -101,3 +101,6 @@ function pickPeaks(arr) {
     }
     return res;
 }
+
+/* ---------- CHALLENGE 3 (JOSEPHUS PERMUTATION) ---------- */
+
