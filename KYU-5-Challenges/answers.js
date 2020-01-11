@@ -104,6 +104,7 @@ function pickPeaks(arr) {
 
 /* ---------- CHALLENGE 3 (JOSEPHUS PERMUTATION) ---------- */
 
+// Solution 1, using while loop
 function josephus(items, k) {
     let ans = []
     let i = (k % items.length) ? (k % items.length) - 1 : items.length - 1
