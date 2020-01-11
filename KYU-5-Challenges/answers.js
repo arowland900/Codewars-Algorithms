@@ -104,3 +104,12 @@ function pickPeaks(arr) {
 
 /* ---------- CHALLENGE 3 (JOSEPHUS PERMUTATION) ---------- */
 
+function josephus(items, k) {
+    let ans = []
+    let i = (k % items.length) ? (k % items.length) - 1 : items.length - 1
+    while (items.length) {
+        ans.push(items.splice(i, 1)[0])
+        i = (--i + k) % items.length
+    }
+    return ans
+}
