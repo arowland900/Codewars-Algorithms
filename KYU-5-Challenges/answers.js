@@ -114,3 +114,12 @@ function josephus(items, k) {
     }
     return ans
 }
+
+// Solution 2, slightly shorter
+function josephus(items, k) {
+    let ans = [], i = 0
+    while (items.length) {
+        ans.push(items.splice(i = (i + k - 1) % items.length, 1)[0])
+    }
+    return ans
+}
