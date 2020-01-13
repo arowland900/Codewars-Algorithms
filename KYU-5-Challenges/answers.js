@@ -135,3 +135,13 @@ function zeros(n) {
     }
     return answer
 }
+
+// Solution 2 – no "i" necessary
+function zeros(n) {
+    let z = 0
+    while (n) {
+        n = Math.floor(n / 5)
+        z += n
+    }
+    return z
+}
