@@ -125,3 +125,13 @@ function josephus(items, k) {
 }
 
 /* ---------- CHALLENGE 4 (NUMBER OF TRAILING ZEROS OF N!) ---------- */
+
+// Solution 1
+function zeros(n) {
+    let [answer, i] = [0, 5]
+    while (n / i) {
+        answer += Math.floor(n / i)
+        i *= 5
+    }
+    return answer
+}
