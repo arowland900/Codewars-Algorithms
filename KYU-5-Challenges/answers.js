@@ -150,3 +150,34 @@ function zeros(n) {
 function zeros(n) {
     return n / 5 < 1 ? 0 : Math.floor(n / 5) + zeros(n / 5)
 }
+
+/* ---------- CHALLENGE 5 (COMPLETE THE TRIANGLE PATTERN) ---------- */
+
+// Solution 1
+function makeTriangle(m, n) {
+    let valid = false
+    let str = ``
+    let num;
+
+    for (let i = 0; i < n; i++) {
+        let x = (Math.pow(i, 2) + i) / 2
+        if (x == n + 1 - m) {
+            num = i
+            break
+        }
+    }
+    if (!num) return ''
+    console.log("MADEIT: ", num)
+    let ans = []
+    for (let i = 0; i < num; i++) {
+        ans.push([])
+        for (let j = 0; j < num; j++) {
+            let cur = (m + j) % 10
+            console.log(ans, cur)
+            //       ans[j].push(cur)
+        }
+        num--
+    }
+    console.log(ans)
+
+}
