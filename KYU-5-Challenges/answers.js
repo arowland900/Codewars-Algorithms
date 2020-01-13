@@ -123,3 +123,5 @@ function josephus(items, k) {
     }
     return ans
 }
+
+/* ---------- CHALLENGE 4 (NUMBER OF TRAILING ZEROS OF N!) ---------- */
