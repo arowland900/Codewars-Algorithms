@@ -84,3 +84,29 @@ So our final result is:
 
 `josephus([1,2,3,4,5,6,7],3)==[3,6,2,7,5,1,4]`
 For more info, browse the [Josephus Permutation](http://en.wikipedia.org/wiki/Josephus_problem) page on wikipedia; related kata: [Josephus Survivor](http://www.codewars.com/kata/josephus-survivor).
+
+---
+
+# Challenge 4
+
+### Link to Challenge: [Number of Trailing Zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript)
+
+**Number of Trailing Zeros of N!**
+
+Write a program that will calculate the number of trailing zeros in a factorial of a given number.
+
+`N! = 1 * 2 * 3 * ... * N`
+
+Be careful `1000!` has 2568 digits...
+
+For more info, see: http://mathworld.wolfram.com/Factorial.html
+
+Examples
+
+```
+zeros(6) = 1
+# 6! = 1 * 2 * 3 * 4 * 5 * 6 = 720 --> 1 trailing zero
+
+zeros(12) = 2
+# 12! = 479001600 --> 2 trailing zeros
+```
