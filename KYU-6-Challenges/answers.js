@@ -243,6 +243,16 @@ function partsSums(ls) {
     return res
 }
 
+// Solution 3 -- finally works for all codewars test cases!
+function partsSums(ls) {
+    let answer = new Array(ls.length)
+    answer.push(0)
+    for (let i = ls.length - 1; i >= 0; i--) {
+        answer[i] = answer[i + 1] + ls[i]
+    }
+    return answer
+}
+
 /* ---------- CHALLENGE 7 (SIMPLE NUMBER TRIANGLE) ---------- */
 
 // Incomplete Solution #1: (using nested loops to push elements)
